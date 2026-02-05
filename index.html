@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeXY-san</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="search-bar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-img">
+                <img src="images/wall titan.png" alt="Wall Titan">
+            </div>
+            <h1>ANIMEXY-SAN</h1>
+            <nav>
+                <a href="#" onclick="showHome()">Home</a>
+                <a href="#" onclick="showAnimeList()">Anime List</a>
+                <form>
+                    <div class="search">
+                        <span class="search-icon material-symbols-outlined">search</span>
+                        <input class="search-input" type="search" placeholder="Search">
+                    </div>
+                </form>
+                <a href="login.html">Log In</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" id="homePage">
+        <div class="image-box" onclick="toggleText()">
+            <img src="images/Naruto smile.jpg">
+            <div class="image-overlay">
+                <h2>WELCOME TO ANIME WORLD</h2>
+                <p>アニメの世界へようこそ</p>
+            </div>
+        </div>
+
+        <div class="text-box" id="textBox">
+            <h3>About Website</h3>
+            <p>
+                Welcome to the anime world! Here you can find the best anime series
+                and movies.
+            </p>
+            <p>
+                Thousands of anime, character information and much more awaits you!
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Help & Support</h3>
+                <ul>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-img">
+                <img src="images/shinobu chibi.png" alt="Shinobu">
+                <div class="kanae-chibi">
+                    <img src="images/kanae chibi.png" alt="Kanae">
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@animexy-san.com</p>
+                <p>Phone: +994 XX XXX XX XX</p>
+                <div class="social-media">
+                    <a href="#" title="Facebook">
+                        <img src="images/facebook-logo-png.png" class="social-icon">
+                    </a>
+                    <a href="#" title="Twitter">
+                        <img src="images/logo-twitter-png.png" class="social-icon">
+                    </a>
+                    <a href="#" title="Instagram">
+                        <img src="images/instagram-png.png" class="social-icon">
+                    </a>
+                    <a href="#" title="YouTube">
+                        <img src="images/youtube-logo.png" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 AnimeXY-san. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <div class="container" id="animeListPage" style="display: none;">
+        <h2 class="page-title">Popular Anime List</h2>
+
+        <div class="anime-grid">
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/25/shingeki-no-kyojin')">
+                <img src="images/Aot.jpg" alt="Attack on Titan">
+                <div class="anime-info">
+                    <div class="anime-title">Attack on Titan</div>
+                    <div class="anime-rating">⭐ 9.0/10</div>
+                    <div class="anime-description">Eren Yeager and his friends who join an elite military group to fight
+                        gigantic human-like creatures called
+                        Titans that are trying to destroy the last remaining human civilization hidden behind huge
+                        walls.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animizu.com/category/naruto/')">
+                <img src="images/naruto by kellie.jpg" alt="Naruto">
+                <div class="anime-info">
+                    <div class="anime-title">Naruto</div>
+                    <div class="anime-rating">⭐ 8.4/10</div>
+                    <div class="anime-description">A young ninja dreams of becoming the Hokage of his village.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animizu.com/category/naruto-shippuuden/')">
+                <img src="images/Naruto Shippuden.jpg" alt="Naruto Shippuden">
+                <div class="anime-info">
+                    <div class="anime-title">Naruto Shippuden</div>
+                    <div class="anime-rating">⭐ 8.7/10</div>
+                    <div class="anime-description">Naruto Uzumaki, a determined young ninja, as he trains hard to save
+                        his best friend Sasuke and become the leader of his village, the Hokage.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/7585/death-note')">
+                <img src="images/Death note.jpg" alt="Death Note">
+                <div class="anime-info">
+                    <div class="anime-title">Death Note</div>
+                    <div class="anime-rating">⭐ 9.0/10</div>
+                    <div class="anime-description">Light Yagami, a brilliant student who finds a magic notebook that
+                        allows him to kill anyone by writing their name,
+                        leading to a dangerous game of cat and mouse with a mysterious detective named L.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/66/one-piece')">
+                <img src="images/One Piece.jpg" alt="One Piece">
+                <div class="anime-info">
+                    <div class="anime-title">One Piece</div>
+                    <div class="anime-rating">⭐ 8.9/10</div>
+                    <div class="anime-description">Monkey D. Luffy and his pirate crew, the Straw Hats,
+                        as they sail the oceans to find the legendary treasure called One Piece and help Luffy become
+                        the King of the Pirates.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/90/boku-no-hero-academia')">
+                <img src="images/My hero academia.jpg" alt="My Hero Academia">
+                <div class="anime-info">
+                    <div class="anime-title">My Hero Academia</div>
+                    <div class="anime-rating">⭐ 8.5/10</div>
+                    <div class="anime-description">Izuku Midoriya, a boy without superpowers in a world full of heroes,
+                        who gets a chance to attend a prestigious hero academy and become the greatest hero of all time.
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/7394/kimetsu-no-yaiba')">
+                <img src="images/Kny.jpg" alt="Demon Slayer">
+                <div class="anime-info">
+                    <div class="anime-title">Demon Slayer</div>
+                    <div class="anime-rating">⭐ 8.7/10</div>
+                    <div class="anime-description">Tanjiro Kamado, a kind boy who joins the Demon Slayer Corps to hunt
+                        demons and find a way to turn his younger sister,
+                        Nezuko, back into a human after she is cursed.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/7792/berserk')">
+                <img src="images/Berserk.jpg" alt="Berserk">
+                <div class="anime-info">
+                    <div class="anime-title">Berserk</div>
+                    <div class="anime-rating">⭐ 8.7/10</div>
+                    <div class="anime-description">Guts, a skilled swordsman, who seeks revenge and fights demons in a
+                        very dark, dangerous fantasy world.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/8/one-punch-man')">
+                <img src="images/One Punch-man.jpg" alt="One Punch-man">
+                <div class="anime-info">
+                    <div class="anime-title">One Punch-man</div>
+                    <div class="anime-rating">⭐ 8.6/10</div>
+                    <div class="anime-description">Saitama, a superhero who can defeat any enemy with just one punch,
+                        but he is bored because fighting is too easy for him.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/8613/tokyo-revengers')">
+                <img src="images/Tokyo revengers.jpg" alt="Tokyo Revengers">
+                <div class="anime-info">
+                    <div class="anime-title">Tokyo Revengers</div>
+                    <div class="anime-rating">⭐ 7.7/10</div>
+                    <div class="anime-description">Takemichi, a young man who can travel back in time to his school days
+                        to save his ex-girlfriend from being murdered by a dangerous gang.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/7352/jujutsu-kaisen')">
+                <img src="images/Jjk.jpg" alt="Jujutsu Kaisen">
+                <div class="anime-info">
+                    <div class="anime-title">Jujutsu Kaisen</div>
+                    <div class="anime-rating">⭐ 8.5/10</div>
+                    <div class="anime-description">Yuji Itadori, a high school student who joins a secret society of
+                        Jujutsu Sorcerers to fight evil spirits called Curses after he swallows a powerful cursed object
+                        to save his friends.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/29/haikyuu')">
+                <img src="images/Haikyuu.jpg" alt="Haikyuu!!">>
+                <div class="anime-info">
+                    <div class="anime-title">Haikyuu!!</div>
+                    <div class="anime-rating">⭐ 8.7/10</div>
+                    <div class="anime-description">Shoyo Hinata, a short but determined boy, who joins his high school's
+                        volleyball team with his new rival,
+                        Tobio Kageyama, to help their team reach the national championships.</div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/11/kimi-no-na-wa')">
+                <img src="images/Your name.jpg" alt="Your Name">
+                <div class="anime-info">
+                    <div class="anime-title">Your Name</div>
+                    <div class="anime-rating">⭐ 8.4/10</div>
+                    <div class="anime-description">Taki and Mitsuha, two high school students who magically start
+                        swapping bodies and lives,
+                        forcing them to find a way to meet each other despite being separated by time and distance.
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/7809/vinland-saga')">
+                <img src="images/Vinland Saga.jpg" alt="Vinland Saga">
+                <div class="anime-info">
+                    <div class="anime-title">Vinland Saga</div>
+                    <div class="anime-rating">⭐ 8.8/10</div>
+                    <div class="anime-description">Thorfinn, a young Viking warrior in the 11th century who seeks
+                        revenge for
+                        his father's death but eventually learns about peace and the true meaning of a "true warrior.
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card" onclick="openAnimeLink('https://animecix.tv/titles/82/bleach')">
+                <img src="images/Bleach.jpg" alt="Bleach">
+                <div class="anime-info">
+                    <div class="anime-title">Bleach</div>
+                    <div class="anime-rating">⭐ 8.2/10</div>
+                    <div class="anime-description">Ichigo Kurosaki, a high school student who suddenly gains the powers
+                        of a Soul Reaper,
+                        forcing him to fight evil spirits called Hollows and guide souls to the afterlife.</div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function openAnimeLink(url) {
+                window.open(url, '_blank');
+            }
+
+            function toggleText() {
+                var textBox = document.getElementById('textBox');
+                if (textBox) {
+                    textBox.classList.toggle('open');
+                }
+            }
+
+            function showHome() {
+                document.getElementById('homePage').style.display = 'block';
+                document.getElementById('animeListPage').style.display = 'none';
+            }
+
+            function showAnimeList() {
+                document.getElementById('homePage').style.display = 'none';
+                document.getElementById('animeListPage').style.display = 'block';
+            }
+
+        </script>
+</body>
+
+</html>

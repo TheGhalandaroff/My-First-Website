@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    font-family: "Science Gothic", sans-serif;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.header-content a:hover {
+    color: #666ae2;
+}
+
+.header-img img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.header-content h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-150%); 
+    margin: 0;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-left: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.image-box {
+    position: relative;
+    cursor: pointer;
+    font-family: "M PLUS 1p", sans-serif;
+    transition: 0.3s;
+}
+
+.image-box:hover{
+    transform: scale(1.05);
+}
+
+.image-box img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.image-overlay h2 {
+    font-size: 36px;
+    color: white;
+}
+
+.image-overlay p {
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+}
+
+.text-box {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+    text-align: left;
+}
+
+.text-box.open {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.text-box h3 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.text-box p {
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.anime-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.anime-card:hover {
+    transform: translateY(-10px);
+}
+
+.anime-card img {
+    width: 100%;
+    height: 350px;
+}
+
+.anime-info {
+    padding: 15px;
+}
+
+.anime-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.anime-rating {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.anime-description {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.page-title {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer {
+    width: 100%;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 0;
+    margin-top: 50px;
+}
+        
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+        
+.footer-section {
+    flex: 1;
+    font-family: "M PLUS 1p", sans-serif;
+    color: #ddd;
+}
+        
+.footer-section h3 {
+    color: #666ae2;
+    margin-bottom: 15px;
+    font-family: "Science Gothic", sans-serif;
+}
+        
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    font-family: "M PLUS 1p", sans-serif;
+}
+        
+.footer-section a {
+    color: #ddd;
+    text-decoration: none;
+    font-family: "M PLUS 1p", sans-serif;
+}
+        
+.footer-section a:hover {
+    color: #6d6e9b;
+}
+
+.footer-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.footer-img img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    transform: translateX(-280px);
+}
+
+.footer-img .kanae-chibi {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    transform: translateX(400px);
+}
+
+        
+.social-media {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+        
+.social-icon:hover {
+    transform: scale(1.2);
+}
+        
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+    color: #999;
+}
+ 
