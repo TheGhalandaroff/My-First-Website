@@ -278,54 +278,54 @@ footer {
 }
 
 @media (max-width: 768px) {
-    
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
 
-    .header-content h1 {
-        position: static; 
-        transform: none;
-        font-size: 24px;
-        margin-bottom: 10px;
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
     }
 
     nav {
-        margin-left: 0;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
+        margin-top: 10px;
     }
 
-    .image-box img {
-        height: 350px;
+    .search-bar { 
+        width: 90%;
+        margin: 10px 0;
     }
+}
 
-    .image-overlay h2 {
-        font-size: 24px;
-    }
-
-    .anime-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
         text-align: center;
     }
 
-    .footer-img img, 
-    .footer-img .kanae-chibi {
-        transform: none;
-        width: 100px;
-        margin: 10px auto;
+    .footer-section {
+        margin-bottom: 20px; 
+        width: 100%;
     }
 
-    .social-media {
+    .social-icons {
         justify-content: center;
     }
 }
- 
+
+@media (max-width: 480px) {
+    .hero {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .hero img {
+        width: 100% !important;
+        border-radius: 10px;
+    }
+}
