@@ -276,4 +276,56 @@ footer {
     border-top: 1px solid #333;
     color: #999;
 }
+
+@media (max-width: 768px) {
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .header-content h1 {
+        position: static; 
+        transform: none;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-left: 0;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .image-box img {
+        height: 350px;
+    }
+
+    .image-overlay h2 {
+        font-size: 24px;
+    }
+
+    .anime-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-img img, 
+    .footer-img .kanae-chibi {
+        transform: none;
+        width: 100px;
+        margin: 10px auto;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+}
  
